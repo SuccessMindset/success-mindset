@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Success Mindset Goal Planner | Success Mindset</title>
+
+    <meta name="description" content="Use this free Success Mindset Goal Planner to turn your goal into a clear action plan. Define your goal, identify obstacles, and create your next steps.">
+
+    <meta name="keywords" content="free goal planner, success mindset goal planner, goal setting tool, goal planning, success goals, personal growth, take action">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .planner-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .planner-intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .planner-intro h1 {
+            margin-bottom: 15px;
+        }
+
+        .planner-intro p {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .planner-card {
+            background: #fff;
+            border: 1px solid #e5e0d5;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        }
+
+        .planner-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .planner-card .question {
+            margin-bottom: 25px;
+        }
+
+        .planner-card label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .planner-card small {
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.75;
+        }
+
+        .planner-card input,
+        .planner-card textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d8d2c5;
+            border-radius: 7px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: #faf9f5;
+        }
+
+        .planner-card textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .planner-card input:focus,
+        .planner-card textarea:focus {
+            outline: 2px solid #e0bd76;
+            border-color: #c9a45c;
+        }
+
+        .action-button {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 7px;
+            padding: 15px 20px;
+            background: #c9a45c;
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .action-button:hover {
+            opacity: 0.9;
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: #333;
+            border: 1px solid #c9a45c;
+            margin-top: 12px;
+        }
+
+        #result {
+            display: none;
+        }
+
+        .success-plan {
+            border-left: 4px solid #c9a45c;
+            padding-left: 20px;
+        }
+
+        .success-plan h3 {
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        .success-plan p {
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+
+        .take-action-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f7f5ef;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .take-action-box strong {
+            font-size: 1.15rem;
+        }
+
+        .privacy-note {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .planner-card {
+                padding: 22px;
+            }
+
+            .planner-container {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Success Mindset</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#principles">Principles</a>
+        <a href="index.html#books">Books</a>
+        <a href="index.html#faq">FAQ</a>
+    </nav>
+</header>
+
+<main class="planner-container">
+
+    <section class="planner-intro">
+        <h1>Free Success Mindset Goal Planner</h1>
+
+        <p>
+            Stop thinking about your goal and start building a plan.
+            Use this free tool to turn what you want to accomplish into
+            clear, practical actions.
+        </p>
+    </section>
+
+    <section class="planner-card">
+
+        <div class="question">
+            <label for="goal">1. What is your goal?</label>
+            <small>Be specific. What do you actually want to accomplish?</small>
+            <textarea id="goal" placeholder="Example: I want to start exercising three times a week."></textarea>
+        </div>
+
+        <div class="question">
+            <label for="why">2. Why does this goal matter to you?</label>
+            <small>Your reason can help keep you moving when motivation disappears.</small>
+            <textarea id="why" placeholder="Example: I want more energy and I want to feel better about myself."></textarea>
+        </div>
+
+        <div class="question">
+            <label for="deadline">3. When do you want to achieve it?</label>
+            <small>Choose a realistic target date.</small>
+            <input type="date" id="deadline">
+        </div>
+
+        <div class="question">
+            <label for="action1">4. What is the first action you can take?</label>
+            <small>Don't choose ten things. Choose the first step.</small>
+            <input type="text" id="action1" placeholder="Example: Go for a 20-minute walk tomorrow.">
+        </div>
+
+        <div class="question">
+            <label for="action2">5. What is another action you can take?</label>
+            <input type="text" id="action2" placeholder="Example: Put three workout times on my calendar.">
+        </div>
+
+        <div class="question">
+            <label for="action3">6. What is one more action?</label>
+            <input type="text" id="action3" placeholder="Example: Prepare my workout clothes tonight.">
+        </div>
+
+        <div class="question">
+            <label for="obstacle">7. What could get in your way?</label>
+            <small>Think honestly about the obstacle instead of pretending it won't happen.</small>
+            <textarea id="obstacle" placeholder="Example: I may feel tired after work and want to skip it."></textarea>
+        </div>
+
+        <div class="question">
+            <label for="response">8. What will you do when that happens?</label>
+            <small>Create your response before the obstacle appears.</small>
+            <textarea id="response" placeholder="Example: I'll remind myself that I only need to start."></textarea>
+        </div>
+
+        <button class="action-button" onclick="createPlan()">
+            Create My Success Plan
+        </button>
+
+    </section>
+
+    <section class="planner-card" id="result">
+
+        <h2>Your Success Plan</h2>
+
+        <div class="success-plan">
+
+            <h3>My Goal</h3>
+            <p id="resultGoal"></p>
+
+            <h3>Why It Matters</h3>
+            <p id="resultWhy"></p>
+
+            <h3>My Target Date</h3>
+            <p id="resultDeadline"></p>
+
+            <h3>My First Three Actions</h3>
+            <p id="resultActions"></p>
+
+            <h3>What Could Get in My Way</h3>
+            <p id="resultObstacle"></p>
+
+            <h3>How I Will Respond</h3>
+            <p id="resultResponse"></p>
+
+            <div class="take-action-box">
+                <strong>Now comes the important part.</strong>
+                <p>Don't just make the plan.</p>
+                <p><strong>Take action.</strong></p>
+            </div>
+
+        </div>
+
+        <button class="action-button secondary-button" onclick="window.print()">
+            Print My Success Plan
+        </button>
+
+        <button class="action-button secondary-button" onclick="startOver()">
+            Start Over
+        </button>
+
+    </section>
+
+    <p class="privacy-note">
+        Your answers are processed in your browser and are not sent to us.
+        No account or sign-up is required.
+    </p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Success Mindset. All rights reserved.</p>
+</footer>
+
+<script>
+function createPlan() {
+
+    const goal = document.getElementById("goal").value.trim();
+    const why = document.getElementById("why").value.trim();
+    const deadline = document.getElementById("deadline").value;
+    const action1 = document.getElementById("action1").value.trim();
+    const action2 = document.getElementById("action2").value.trim();
+    const action3 = document.getElementById("action3").value.trim();
+    const obstacle = document.getElementById("obstacle").value.trim();
+    const response = document.getElementById("response").value.trim();
+
+    if (!goal || !why || !deadline || !action1 || !obstacle || !response) {
+        alert("Please complete the required sections before creating your plan.");
+        return;
+    }
+
+    document.getElementById("resultGoal").textContent = goal;
+    document.getElementById("resultWhy").textContent = why;
+
+    const formattedDate = new Date(deadline + "T00:00:00").toLocaleDateString(
+        undefined,
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+    document.getElementById("resultDeadline").textContent = formattedDate;
+
+    let actions = "1. " + action1;
+
+    if (action2) {
+        actions += "\n2. " + action2;
+    }
+
+    if (action3) {
+        actions += "\n3. " + action3;
+    }
+
+    document.getElementById("resultActions").textContent = actions;
+    document.getElementById("resultObstacle").textContent = obstacle;
+    document.getElementById("resultResponse").textContent = response;
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function startOver() {
+
+    document.getElementById("goal").value = "";
+    document.getElementById("why").value = "";
+    document.getElementById("deadline").value = "";
+    document.getElementById("action1").value = "";
+    document.getElementById("action2").value = "";
+    document.getElementById("action3").value = "";
+    document.getElementById("obstacle").value = "";
+    document.getElementById("response").value = "";
+
+    document.getElementById("result").style.display = "none";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
